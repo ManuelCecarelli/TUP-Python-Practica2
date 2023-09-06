@@ -1,6 +1,5 @@
 """Expresiones Booleanas."""
 
-
 def es_vocal_if(letra: str) -> bool:
     """Toma un string y devuelve un booleano en base a si letra es una vocal o
     no.
@@ -13,7 +12,18 @@ def es_vocal_if(letra: str) -> bool:
 
     Referencia: https://docs.python.org/3/library/stdtypes.html#string-methods
     """
-
+    letra = letra.lower()
+    if letra == "a":
+        return True
+    if letra == "e":
+        return True
+    if letra == "i":
+        return True
+    if letra == "o":
+        return True
+    if letra == "u":
+        return True
+    return False
 
 # NO MODIFICAR - INICIO
 assert es_vocal_if("a")
@@ -23,9 +33,7 @@ assert es_vocal_if("e")
 assert es_vocal_if("E")
 # NO MODIFICAR - FIN
 
-
 ###############################################################################
-
 
 def es_vocal_if_in(letra: str) -> bool:
     """Re-escribir utilizando un sólo IF y el operador IN.
@@ -39,7 +47,9 @@ def es_vocal_if_in(letra: str) -> bool:
 
     Referencia: https://docs.python.org/3/reference/expressions.html#membership-test-operations # noqa: E501
     """
-
+    if letra.lower() in "aeiou":
+        return True
+    return False
 
 # NO MODIFICAR - INICIO
 assert es_vocal_if_in("a")
@@ -47,9 +57,7 @@ assert not es_vocal_if_in("b")
 assert es_vocal_if_in("A")
 # NO MODIFICAR - FIN
 
-
 ###############################################################################
-
 
 def es_vocal_in(letra: str) -> bool:
     """Re-escribir como expresión booleana utilizando el operador IN
@@ -60,7 +68,7 @@ def es_vocal_in(letra: str) -> bool:
         - No utilizar FOR.
         - No utilizar listas.
     """
-
+    return letra.lower() in "aeiou"
 
 # NO MODIFICAR - INICIO
 assert es_vocal_in("a")
